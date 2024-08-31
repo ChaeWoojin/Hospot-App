@@ -1,0 +1,19 @@
+<!--A-->
+
+{% extends 'archinator/answer.html' %}
+
+{% block disease %}
+<span class="expected_disease"> Anxiety Disorder, Depression or Somatization Disorder is highly expected.</span>
+{% endblock %}
+
+{% block department %}
+ <span class="department"> Visiting Chest Surgery is recommended. </span>
+{% endblock %}
+
+{% block speciality %}
+
+ <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'hospot:department' 7 1%}">
+      Chest Surgery
+ </a>
+
+{% endblock %}

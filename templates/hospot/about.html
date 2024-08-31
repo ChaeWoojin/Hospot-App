@@ -1,0 +1,153 @@
+{% extends 'style.html' %}
+{% load static %}
+{% block content %}
+    <div class="container" style="overflow-y:auto; width:100%; height:78.5vh;">
+        <div class="card" style="margin-top: 3vh;">
+            <div class="row justify-content-center" >
+
+                <figure style="padding:2rem; padding-top:1.25rem; padding-bottom:0rem;">
+                    <hr>
+                    <blockquote class="blockquote text-center">
+                        <h3>"Only a Life Lived for Others is a Life Worthwhile"</h3>
+                    </blockquote>
+                    <figcaption class="blockquote-footer text-center">
+                        <cite title="Source Title">Albert Einstein</cite>
+                    </figcaption>
+                    <hr>
+                </figure>
+
+            </div>
+            <hr class="rounded" style="border-top: 8px solid #bbb; border-radius: 5px; margin:0;">
+
+            <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true" style="width: 33.333333333333333333%;">Symptom <br> Checker</button>
+                    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" style="width: 33.333333333333333333%;">Hospitals</button>
+                    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false" style="width: 33.333333333333333333%;">BBB</button>
+                </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+                <!-- ---------------------------------------------------- -->
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row" style="margin-top:5vh; margin-bottom: 5vh">
+                        <div class="col-12 ">
+                            <div class="text" style="text-align: center;">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone3.png' %}" style="width: 50%; border: solid;" />
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-left: 5vw; margin-bottom:6px">
+                        <b>1.</b> Select the desired scenario (sick area) and start self-diagnosis.
+                    </p>
+                    <p style="margin-left: 5vw; margin-bottom: 5vh">
+                        <b>2.</b> Choose the answer that you think is closer to your condition, yes or no.
+                    </p>
+                    <div style="margin-left: 5vw; margin-right: 5vw; margin-bottom: 5vh; border: solid 1px; border-radius:20px; padding:2vh;">
+                        <b>+ Point </b> <br>
+                        If you click the Yes and No buttons by mistake, you can go back to the previous question by clicking the <b>"Previous Page" button</b> in the lower right corner of the questionnaire.
+                    </div>
+                    <div class="row" style="margin-top:5vh; margin-bottom: 5vh">
+                        <div class="col-12 ">
+                            <div class="text" style="text-align: center;">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone5.png' %}" style="width: 50%; border: solid;" />
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-left: 5vw; margin-bottom:6px">
+                        <b>3.</b> You can check the expected disease and recommended division in the result.
+                    </p>
+                    <p style="margin-left: 5vw; margin-bottom:6px">
+                        <b>4.</b> When button 4 is pressed, a list of hospitals corresponding to the recommended division is displayed.
+                    </p>
+                    <p style="margin-left: 5vw; margin-bottom:0">
+                        <b>5.</b> If you press button 5, you can use the bbb service immediately.
+                    </p>
+                    <hr class="solid" style="border-top: 3px solid #bbb;" >
+                </div>
+
+                </div>
+                <!-- ---------------------------------------------------- -->
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <p style="margin-top:6vw; margin-left: 5vw; margin-bottom:6px">
+                        <b>1.</b> Here, you can find a hospital of your choice without making a diagnosis.
+                    </p>
+                    <p style="margin-left: 5vw; margin-bottom: 5vh">
+                        <b>2.</b> When a department is selected, hospitals and information are listed as shown in the screen below.
+                    </p>
+
+                    <div class="row" style="margin-top:5vh; margin-bottom: 5vh">
+                        <div class="col-12 ">
+                            <div class="text" style="text-align: center;">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone6.png' %}" style="width: 50%; border: solid;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-left: 5vw; margin-right: 5vw; margin-bottom: 5vh; border: solid 1px; border-radius:20px; padding:2vh;">
+                        <b>+ Point </b> <br>
+                        The hospitals marked ★ are certified by Korea Institute for Healthcare Accreditation.
+                    </div>
+                    <p style="margin-left: 5vw; margin-bottom:6px">
+                        <b>3.</b> The location of hospitals can be identified through the map, and the map can be enlarged and moved.
+                    </p>
+<hr class="rounded" style="border-top: 8px solid #bbb; border-radius: 5px; margin:0;">
+                    <p style="margin-top: 3vw; margin-left: 5vw; margin-bottom:5vh">
+                        <b>More, In PC version </b>
+                    </p>
+                    <div class="row" style="margin-top:1vh; margin-bottom: 5vh">
+                        <div class="col-12 ">
+                            <div class="text" style="text-align: center;">
+                                <img class="img-fluid" src="{% static 'bbb/img/pc1.png' %}" style="width: 50%; border: solid;" />
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-left: 5vw; margin-bottom:4vh">
+                        <b></b> If you click the name of hospital, the hospital's information is displayed on the map.
+                    </p>
+                </div>
+
+                <!-- ---------------------------------------------------- -->
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                    <p style="margin-top:6vw; margin-left: 5vw; margin-bottom:6px">
+                        <b>1.</b> With this service, you can communicate with medical staff in real time through an interpreter.
+                    </p>
+                    <p style="margin-left: 5vw; margin-bottom: 5vh">
+                        <b>2.</b> Click the button below to go to the page containing the manual.
+                    </p>
+
+                    <div class="row" style="margin-top:5vh; margin-bottom: 5vh">
+                        <div class="col-12 ">
+                            <div class="text" style="text-align: center;">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone7.png' %}" style="width: 50%; border: solid;" />
+                            </div>
+                        </div>
+                    </div>
+                    <p style="margin-left: 5vw; margin-bottom: 5vh">
+                        <b>3.</b> If you press the 'Click to Call' button on that page, it is connected to the phone app.
+                    </p>
+                    <div class="row" style="margin-top:5vh; margin-bottom: 5vh">
+                        <div class="col-6 ">
+                            <div class="text" style="text-align: right">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone1.jpg' %}" style="width: 90%;" />
+                            </div>
+                        </div>
+                        <div class="col-6 ">
+                            <div class="text" style="text-align: left">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone2.jpg' %}" style="width: 90%" />
+                            </div>                </div>
+                    </div>
+
+                    <p style="margin-left: 5vw; margin-bottom: 5vh">
+                        <b>4.</b> More details can be found on the manual page.
+                    </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+<div class="btn" style="width:80%; background-color: #0a53be; text-decoration-color: #ffffff;"> <a href="tel:1588-5644" style="text-decoration: none; text-decoration-color: #ffffff">BBB</a></div>
+
+

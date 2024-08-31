@@ -1,0 +1,19 @@
+<!--A-->
+
+{% extends 'archinator/answer.html' %}
+
+{% block disease %}
+<span class="expected_disease">Benign Prostatic Hyperplasia is strongly expected.</span>
+{% endblock %}
+
+{% block department %}
+ <span class="department"> Visiting Neuro Psychiatry is recommended. </span>
+{% endblock %}
+
+{% block speciality %}
+
+ <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'hospot:department' 3 1%}">
+      Neuro Psychiatry
+ </a>
+
+{% endblock %}

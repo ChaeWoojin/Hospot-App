@@ -1,0 +1,67 @@
+{% extends 'style.html' %}
+{% load static %}
+{% block css %}
+    <link href="{% static 'archinator/css/partcard.css'%}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+
+<!--모바일 용 -->
+{% if symptom_list %}
+    <div class="container px-lg-5 pt-5 d-md-none d-lg-none d-xl-none" style="overflow-y:auto; width:100%; height:80vh; padding:0;>
+    <!-- Page Features-->
+    <div class="row gx-lg-5">
+    {% for symptom in symptom_list %}
+        <div class="col-12 mb-2">
+            <div class="card border-left-primary shadow h-20px py-2 mb-0">
+                <a href="{% url 'archinator:diagnose' part.id symptom.id%}" class="fs-4 fw-bold text-white">
+                    <div class="card-body ">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    {{part}}
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{symptom}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% else %}
+    <p>관련 증상이 없습니다</p>
+{% endif %}
+
+
+    <!--pc용-->
+    <section class="pt-4 d-none d-md-block">
+        {% if symptom_list %}
+            <div class="container px-lg-5">
+            <!-- Page Features-->
+            <div class="row gx-lg-5">
+                {% for symptom in symptom_list %}
+                    <div class="col-6">
+                        <div class="card border-left-primary shadow h-20px py-2 mb-5">
+                            <a href="{% url 'archinator:diagnose' part.id symptom.id%}" class="fs-4 fw-bold text-white">
+                                <div class="card-body ">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                {{part}}
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{symptom}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>관련 증상이 없습니다</p>
+        {% endif %}
+        </div>
+    </section>
+{% endblock %}

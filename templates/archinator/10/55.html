@@ -1,0 +1,16 @@
+<!-- Finger Pain -->
+
+<!--Q-->
+{% extends 'archinator/question.html' %}
+
+{% block question %}
+<h1> Q. Do you have pain in other areas?</h1>
+{% endblock %}
+
+{% block yes %}
+<a href="{% url 'archinator:question' part.id symptom.id 101%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">Yes</a>
+{% endblock %}
+
+{% block no %}
+<a href="{% url 'archinator:question' part.id symptom.id 2%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">No</a>
+{% endblock %}

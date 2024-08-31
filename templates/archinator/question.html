@@ -1,0 +1,121 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    {% block meta %}
+    {% endblock %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'archinator/css/bootstrap.min.css' %}"/>
+
+
+    {% block css %}
+    {% endblock %}
+    <!-- Core theme CSS (includes Bootstrap)-->
+
+    <link href="{% static 'hospot/css/styles.css' %}?after" rel="stylesheet" />
+    <link href="{% static 'archinator/css/practice.css' %}?after" rel="stylesheet" />
+    <title>Welcome to Archinator</title>
+</head>
+<body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top" id="">HOSPOT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'hospot:main' %}">Main</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'archinator:index' %}">Archinator</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'hospot:index' %}">Hospot</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'bbb:main' %}">BBB</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+<div class="modal modal-sheet position-static d-block"
+     style="height: 85.5vh; margin-top: 14.5vh;"   tabindex="-1" role="dialog" id="modalSheet">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-6 shadow" style="height: 60vh; width:95%; margin:0 auto;">
+            <div class="modal-header border-bottom-0" id="pleasebox">
+
+                <div class="p-3 modal-title" style="height: 39vh">
+                    <div class="wrrapper" style="height: 100%;">
+                        <div class="boxx">
+                            {% block question %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mx-3">
+                <div class="line---"></div>
+            </div>
+            <div class="modal-footer flex-column border-top-0">
+                <div class="row" style="width : 75%;">
+                    <div class="col-6">
+                        {% block yes %} {% endblock %}
+                    </div>
+                    <div class="col-6">
+                        {% block no %} {% endblock %}
+                    </div>
+                </div>
+            </div>
+            <section class="d-flex flex-row-reverse" style="height: 20vh; padding-top:40px">
+                <form>
+                    <script type="text/javascript">
+                      function goBack(){
+                        window.history.back();
+                      }
+                    </script>
+                    <input type="button" value="Previous Page" onclick="goBack();" style="margin-top: 5vh;"/>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- Footer-->
+<footer class="foot d-md-none d-lg-none d-xl-none" style="position:absolute; bottom:0;">
+    <div>
+        <a type="button" class="btn" href="{% url 'hospot:main' %}" ><img src="{% static 'hospot/img/toolbar/home_icon.svg' %}" style="height: 4.5vh;"/></a>
+    </div>
+    <div>
+        <a type="button" class="btn" href="{% url 'hospot:index' %}"><img src="{% static 'hospot/img/toolbar/search_icon.svg' %}" style="height: 4.5vh;"/></a>
+    </div>
+    <div>
+        <a type="button" class="btn" href="#"><img src="{% static 'hospot/img/toolbar/bb.svg' %}" style="height: 4.5vh;"/></a>
+    </div>
+</footer>
+<!-- Bootstrap core JS-->
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+-->
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'hospot/js/scripts.js'%}"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+
+</body>
+</html>
+
+<!-- R159 G1160 B160 -->
+

@@ -1,0 +1,15 @@
+<!--Q-->
+{% extends 'archinator/question.html' %}
+
+{% block question %}
+<h1> Q. Do you feel thirsty and thirsty?</h1>
+<div class="fst-italic">Is your heart pounding or dizzy than usual?</div>
+{% endblock %}
+
+{% block yes %}
+<a href="{% url 'archinator:question' part.id symptom.id 6%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">Yes</a>
+{% endblock %}
+
+{% block no %}
+<a href="{% url 'archinator:question' part.id symptom.id 4%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">No</a>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!--Q-->
+{% extends 'archinator/question.html' %}
+
+{% block question %}
+<h1> Q. Have you ever been diagnosed with high blood pressure, diabetes, hyperlipidemia, or cardiovascular disease? </h1>
+{% endblock %}
+
+{% block yes %}
+<a href="{% url 'archinator:question' part.id symptom.id 12%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">Yes</a>
+{% endblock %}
+
+{% block no %}
+<a href="{% url 'archinator:question' part.id symptom.id 3%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">No</a>
+{% endblock %}

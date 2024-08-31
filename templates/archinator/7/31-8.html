@@ -1,0 +1,14 @@
+<!--Q-->
+{% extends 'archinator/question.html' %}
+
+{% block question %}
+<h1> Q. Do you feel pain when you pee?</h1>
+{% endblock %}
+
+{% block yes %}
+<a href="{% url 'archinator:question' part.id symptom.id 103%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">Yes</a>
+{% endblock %}
+
+{% block no %}
+<a href="{% url 'archinator:question' part.id symptom.id 9%}" type="button" class="btn btn-lg btn-outline-dark w-100 mx-0 mb-2">No</a>
+{% endblock %}

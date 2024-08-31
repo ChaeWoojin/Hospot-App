@@ -1,0 +1,30 @@
+<!--A-->
+
+{% extends 'archinator/answer.html' %}
+
+
+{% block disease %}
+<span class="expected_disease">'Inflammation' are strongly expected.</span>
+{% endblock %}
+
+
+
+
+{% block department %}
+ <span class="department"> 'Visiting Rehabilitation medicine doctor' is recommended. </span>
+
+{% endblock %}
+
+
+
+
+{% block speciality %}
+
+ <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'hospot:department' 21 1%}">
+      Rehabilitation Medicine Clinics
+ </a>
+
+{% endblock %}
+
+
+

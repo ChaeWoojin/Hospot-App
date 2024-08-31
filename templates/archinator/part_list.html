@@ -1,0 +1,152 @@
+{% extends 'style.html' %}
+{% load static %}
+{% block css %}
+<link href="{% static 'archinator/css/partcard.css'%}" rel="stylesheet" />
+{% endblock %}
+{% block content %}
+<div class="container2" style="overflow-y:auto; width:100%; height:78.5vh;">
+    <div class="row no-gutters">
+        <!--General Condition-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%; margin-top: 2%">
+            <div class="card" style="width: 90%; margin-left: 8%; margin-right: 4%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 1%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">General Condition</div>
+                            <img src="{% static 'archinator/img/body.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Skin-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%; margin-top: 2%">
+            <div class="card" style="width: 90%; margin-left: 4%; margin-right: 8%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 2%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Skin</div>
+                            <img src="{% static 'archinator/img/skin.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--head and neck-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 8%; margin-right: 4%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 3%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Head and Neck</div>
+                            <img src="{% static 'archinator/img/head_and_neck.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Chest-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 4%; margin-right: 8%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 4%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Chest</div>
+                            <img src="{% static 'archinator/img/chest.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Breast-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 8%; margin-right: 4%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 5%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Breast</div>
+                            <img src="{% static 'archinator/img/breast.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Abdomen-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 4%; margin-right: 8%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 6%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Abdomen</div>
+                            <img src="{% static 'archinator/img/abdomen.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Urinary-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 8%; margin-right: 4%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 7%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Urinary</div>
+                            <img src="{% static 'archinator/img/urinary.png' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Reproductive-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 4%; margin-right: 8%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 8%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Reproductive</div>
+                            <img src="{% static 'archinator/img/reproductive.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Brain/Mind-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 8%; margin-right: 4%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 9%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Brain & Mind</div>
+                            <img src="{% static 'archinator/img/brain.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Extremities/Joints-->
+        <div class="col-6 d-flex justify-content-center" style="margin-bottom: 2%">
+            <div class="card" style="width: 90%; margin-left: 4%; margin-right: 8%">
+                <div class="card border-bottom-info shadow h-10vh">
+                    <div class="card-body" style="width: 100%; height: 20vh">
+                        <a href="{% url 'archinator:detail' 10%}" class="fs-4 fw-bold text-white">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase "></div>
+                            <div class="h6 font-weight-bold text-gray-800 text-center">Extremities/Joints</div>
+                            <img src="{% static 'archinator/img/extremities_joints.jpg' %}" class="rounded mx-auto d-block" style="width: 100px; height:60%" alt=""></img>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,254 @@
+{% extends 'style.html' %}
+{% load static %}
+{% block css %}
+<!-- Font Awesome icons (free version)-->
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+<!-- Core theme CSS (includes Bootstrap)-->
+<link href="{% static 'hospot/css/styles.css' %}?after" rel="stylesheet" />
+{% endblock %}
+
+{% block content %}
+
+
+<div class="row card d-md-none d-lg-none d-xl-none" style="align-items: center; margin-top:4vh; margin-left:5vw; margin-right:5vw; height: 35vh">
+    <a href="{% url 'archinator:index' %}" class="row text-black" style="height:35vh; text-decoration: none">
+        <div class="col-6 mx-auto my-auto" style="text-align: center">
+            <h4><b style="font-size: 6vw;">Symptom Checker</b></h4>
+            <p style="font-size: 3.5vw; margin-bottom: 0px;">Diagnose yourself</p>
+        </div>
+        <div class="col-6 mx-auto my-auto" style="vertical-align: middle;">
+            <img src="{% static 'hospot/img/doctor.png' %}" alt="Avatar" style="width:100%; height:30vh;"/>
+        </div>
+    </a>
+</div>
+
+<div class="row d-md-none d-lg-none d-xl-none" style="margin-left: 5vw; margin-right: 5vw; margin-bottom:5.5vh; ">
+    <div class="col-6 p-0" >
+        <a href="{% url 'hospot:index' %}" class="card text-black" style="height: 37vh; text-decoration: none">
+            <img src="{% static 'hospot/img/hospital_list.png' %}" style="width:80%; height:55%; margin:2vh auto;display: flex;justify-content: center;" />
+            <div class="container" style="text-align:center;">
+                <h5><b style="font-size:4.5vw">Department</b></h5>
+                <p style="font-size: 3.5vw; margin-bottom: 0px;">Recommended list</p>
+            </div>
+        </a>
+    </div>
+    <div class="col-6 p-0 ">
+        <a href="{% url 'bbb:main' %}" class="card text-black" style="height: 37vh; text-decoration: none"">
+            <img src="{% static 'hospot/img/bbb.png' %}" style="width:80%; height:55%; margin:2vh auto;display: flex;justify-content: center;"/>
+            <div class="container" style="text-align:center;">
+                <h5><b style="font-size:4.5vw">BBB Service</b></h5>
+                <p style="font-size: 3.5vw; margin-bottom: 0px;">Real-time translate<br> </p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+<!--------     PC용    ---------->
+<header class="masthead d-none d-md-block" >
+    <div class="container">
+        <div class="masthead-subheading">Welcome To Our Service!</div>
+        <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+        <a class="btn btn-primary btn-xl text-uppercase" href="{% url 'archinator:index' %}">Diagnose yourself right now!</a>
+    </div>
+</header>
+
+<!-- Portfolio Grid-->
+<section class="page-section bg-light d-none d-md-block" id="portfolio">
+    <div class="container">
+        <div class="text-center" style=" margin-bottom: 3vh;">
+            <h2 class="section-heading text-uppercase">Hospitals</h2>
+            <a class="section-subheading text-muted" href="{%url 'hospot:index' %}" style="text-decoration: none;">If you want to see more hospitals, please click here.</a>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-4 mb-4">
+                <!-- Portfolio item 1-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="{% url 'hospot:department' 2 1%}" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 35 1 %}" style="text-align: center;">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/dentist.svg' %}" alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 35 1 %}">
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Dentist</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4">
+                <!-- Portfolio item 2-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 12 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/eyes.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 12 1 %}">
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Ophthalmology</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4">
+                <!-- Portfolio item 3-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 13 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/ears.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 13 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Ear, Nose & Throat</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4 mb-lg-0">
+                <!-- Portfolio item 4-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 1 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/inner.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 1 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Internal Medicine</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4 mb-sm-0">
+                <!-- Portfolio item 5-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 14 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/skin.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 14 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Dermatology </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <!-- Portfolio item 6-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 3 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/mental.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 3 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Neuro Psychiatry</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4">
+                <!-- Portfolio item 1-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 10 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/women.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 10 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Obstetrics & Gynecology</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4">
+                <!-- Portfolio item 2-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 15 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/Urology.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 15 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Urology</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4">
+                <!-- Portfolio item 3-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 5 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/sprint.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 5 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Orthopedics</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4 mb-lg-0">
+                <!-- Portfolio item 4-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 4 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/surgery.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 4 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">General Surgery</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4 mb-4 mb-sm-0">
+                <!-- Portfolio item 5-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 23 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/home.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 23 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Family Medicine</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <!-- Portfolio item 6-->
+                <div class="portfolio-item" style="text-align: center;">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6" style="text-align: center;">
+                        <a href="{% url 'hospot:department' 11 1 %}">
+                            <img class="img-fluid" src="{% static 'hospot/img/parts/child.svg' %}"  alt="..." />
+                        </a>
+                    </a>
+                    <a href="{% url 'hospot:department' 11 1 %}">
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">Pediatrics</div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white d-none d-md-block" style="background-color: #255372;">
+            <div class="container"><small>Copyright &copy; HOSPOT 2021</small></div>
+        </div>
+{% endblock %}

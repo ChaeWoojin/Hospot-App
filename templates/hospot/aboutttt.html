@@ -1,0 +1,64 @@
+{% extends 'style.html' %}
+{% load static %}
+{% block content %}
+    <div class="container" style="overflow-y:auto; width:100%; height:78.5vh;">
+        <div class="card" style="margin-top: 5vh;">
+            <div class="row justify-content-center">
+                <div class="btn" style="width: 80%; border-color:#1f518b; border-radius:5vw ;margin-top: 5vh; margin-bottom: 5vh;"><a href="tel:1588-5644" style="text-decoration: none; text-decoration-color: #ffffff;"><p class="text-black my-auto" style="margin-bottom: 0;"><b>Click to Call</b></p></a></div>
+            </div>
+            <hr class="rounded" style="border-top: 8px solid #bbb; border-radius: 5px; margin:0;">
+
+            <ul class="nav nav-tabs nav-fill justify-content-center text-gray-100" style="text-decoration-color: black" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active"  id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Symptom Checker</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Hospitals</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">BBB Service</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row" style="margin-top:5vh; margin-bottom: 5vh">
+                        <div class="col-6 ">
+                            <div class="text" style="text-align: right">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone1.jpg' %}" style="width: 90%;" />
+                            </div>
+                        </div>
+                        <div class="col-6 ">
+                            <div class="text" style="text-align: left">
+                                <img class="img-fluid" src="{% static 'bbb/img/phone2.jpg' %}" style="width: 90%" />
+                            </div>                </div>
+                    </div>
+                    <p style="margin-left: 5vw; margin-bottom:0">
+                        <b>1.</b> Press Click to Call Above.
+                    </p>
+                    <p style="margin-left: 5vw; margin-bottom: 5vh">
+                        <b>2.</b> Press Keypad and Choose Language.
+                    </p>
+                    <hr class="solid" style="border-top: 3px solid #bbb; margin-bottom: 5vh" >
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row" style="margin-top:5vh">
+                        <div class="col-4">
+                            <img src="{% static 'hospot/img/bbb.png' %}" style="width:100%;"/>
+                        </div>
+                        <div class="col-8">
+                            <p style="margin: 0"><b>Name: </b>BBB Korea</p>
+                            <p style="margin: 0"><b>Phone: </b>+82: 02-725-9108~9</p>
+                            <p style="margin: 0"><b>Service: </b> Language</p>
+                            <b>Website: </b><a href="https://www.bbbkorea.org" style="font-size: 0.5rem">https://www.bbbkorea.org</a>
+                        </div>
+                        <p align="center" style="margin-top:5vh">BBB Korea is the NGO established by volunteers. Volunteers help foreigners in various situations as a interpreter.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+<div class="btn" style="width:80%; background-color: #0a53be; text-decoration-color: #ffffff;"> <a href="tel:1588-5644" style="text-decoration: none; text-decoration-color: #ffffff">BBB</a></div>
+
+

@@ -1,0 +1,35 @@
+{% extends 'style.html' %}
+{% load static %}
+{% block css %}
+    <link href="{% static 'archinator/css/answer.css' %}" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/93f83a8e2f.js" crossorigin="anonymous"></script>
+{% endblock %}
+{% block content%}
+    <div class="bg-dark py-5" style="height:80vh; display: flex; justify-content: center;align-items: center;">
+        <div class="container px-5" >
+            <div class="row gx-5 justify-content-center" >
+                <div class="text-center my-5">
+                    <h1 class="display-5 fw-bolder text-white mb-2">
+                        {% block disease %}
+                        {% endblock %}
+                    </h1>
+                    <p class="lead text-white-50 mb-4">
+                        {% block department %}
+                        {% endblock %}
+                    </p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                        {% block speciality %}
+                        {% endblock %}
+                        <a class="btn btn-outline-light btn-lg px-4" href="{% url 'bbb:main' %}">
+                            <i class="fas fa-arrow-right"></i> Directly connect to bbb service</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+

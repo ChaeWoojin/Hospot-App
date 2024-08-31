@@ -1,0 +1,17 @@
+.header, .footer {
+    background-color: skyblue;
+    padding: 8px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.header {
+    position: sticky;
+    top:0;
+}
+
+.footer {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}

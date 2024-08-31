@@ -1,0 +1,17 @@
+<!--A-->
+{% extends 'archinator/answer.html' %}
+
+{% block disease %}
+<span class="expected_disease">Sorry, we cannot find your disease</span>
+{% endblock %}
+
+{% block department %}
+<span class="department"> According to this scenario, visiting Urologist is recommended. </span>
+{% endblock %}
+
+{% block speciality %}
+<a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'hospot:department' 15 1%}">
+    Urology
+</a>
+{% endblock %}
+

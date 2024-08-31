@@ -1,0 +1,21 @@
+<!--A-->
+{% extends 'archinator/answer.html' %}
+
+{% block disease %}
+<span class="expected_disease">Bladder cancer, or Calculus is strongly expected.</span>
+{% endblock %}
+
+{% block department %}
+<span class="department"> Visiting Urologist is recommended. </span>
+{% endblock %}
+
+{% block speciality %}
+
+<a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'hospot:department' 15 1%}">
+    Urology
+</a>
+
+{% endblock %}
+
+
+
